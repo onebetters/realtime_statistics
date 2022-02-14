@@ -1,0 +1,24 @@
+[
+  {
+    "id": "TSg001",
+    "code": "DISTINCT_SELLER_HAVE_TRADE_PER_HOUR_4_QM",
+    "period": 60,
+    "event": "MarketTradeDeal",
+    "keys": "",
+    "value": "T(com.qianmi.mp.purchase.micro.stat.market.realtime.core.supports.StatHelpers).shopIdAsNumber(sellerShopId)",
+    "condition": "",
+    "desc": "千米，每小时成交商家店铺数(去重)",
+    "aggregator": "distinctCount"
+  },
+  {
+    "id": "TSg002",
+    "code": "DISTINCT_SELLER_HAVE_TRADE_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "",
+    "value": "T(com.qianmi.mp.purchase.micro.stat.market.realtime.core.supports.StatHelpers).shopIdAsNumber(sellerShopId)",
+    "condition": "",
+    "desc": "千米，每天成交商家店铺数(去重)",
+    "aggregator": "distinctCount"
+  }
+]

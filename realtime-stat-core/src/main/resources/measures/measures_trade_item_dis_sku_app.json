@@ -1,0 +1,13 @@
+[
+  {
+    "id": "TIKa001",
+    "code": "DISTINCT_TRADE_SKU_DAY_4_APP",
+    "period": 1440,
+    "event": "MarketTradeItem",
+    "keys": "b2bGroupId",
+    "value": "T(com.qianmi.mp.purchase.micro.stat.market.realtime.core.supports.StatHelpers).skuIdAsNumber(skuId)",
+    "condition": "",
+    "desc": "小程序，每天成交sku品种数(去重)",
+    "aggregator": "distinctCount"
+  }
+]

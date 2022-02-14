@@ -1,0 +1,35 @@
+[
+  {
+    "id": "TICm001",
+    "code": "TRADE_ITEM_COUNT_BY_MARKET_ID_PER_HOUR",
+    "period": 60,
+    "event": "MarketTradeItem",
+    "keys": "marketId,skuId",
+    "value": "count",
+    "condition": "",
+    "desc": "市场，按SKU分组，每小时成交销量",
+    "aggregator": "sum"
+  },
+  {
+    "id": "TICm002",
+    "code": "TRADE_ITEM_COUNT_BY_MARKET_ID_PER_DAY",
+    "period": 1440,
+    "event": "MarketTradeItem",
+    "keys": "marketId,skuId",
+    "value": "count",
+    "condition": "",
+    "desc": "市场，按SKU分组，每天成交销量",
+    "aggregator": "sum"
+  },
+  {
+    "id": "TICm003",
+    "code": "TRADE_ITEM_COUNT_PER_DAY_4_MARKET",
+    "period": 1440,
+    "event": "MarketTradeItem",
+    "keys": "marketId",
+    "value": "count",
+    "condition": "",
+    "desc": "市场，每天成交总SKU销量",
+    "aggregator": "sum"
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "Ma001",
+    "code": "MARKET_INCR_PER_HOUR_4_APP",
+    "period": 60,
+    "event": "MarketAdd",
+    "keys": "b2bGroupId",
+    "value": "identifier",
+    "condition": "",
+    "desc": "小程序，每小时新增市场数",
+    "aggregator": "count"
+  },
+  {
+    "id": "Ma002",
+    "code": "MARKET_INCR_PER_DAY_4_APP",
+    "period": 1440,
+    "event": "MarketAdd",
+    "keys": "b2bGroupId",
+    "value": "identifier",
+    "condition": "",
+    "desc": "小程序，每天新增市场数",
+    "aggregator": "count"
+  },
+  {
+    "id": "Ma003",
+    "code": "MARKET_INCR_PROVINCE_PER_DAY_4_APP",
+    "period": 1440,
+    "event": "MarketAdd",
+    "keys": "b2bGroupId,province",
+    "value": "identifier",
+    "condition": "",
+    "desc": "小程序，按省分组，每天新增市场数",
+    "aggregator": "count"
+  },
+  {
+    "id": "Ma004",
+    "code": "MARKET_INCR_CITY_PER_DAY_4_APP",
+    "period": 1440,
+    "event": "MarketAdd",
+    "keys": "b2bGroupId,city",
+    "value": "identifier",
+    "condition": "",
+    "desc": "小程序，按市分组，每天新增市场数",
+    "aggregator": "count"
+  }
+]

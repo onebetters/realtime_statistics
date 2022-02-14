@@ -1,0 +1,24 @@
+[
+  {
+    "id": "TICg001",
+    "code": "TRADE_ITEM_COUNT_BY_SKU_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketTradeItem",
+    "keys": "skuId",
+    "value": "count",
+    "condition": "",
+    "desc": "千米，按SKU分组，每天成交销量",
+    "aggregator": "sum"
+  },
+  {
+    "id": "TICg002",
+    "code": "TRADE_ITEM_COUNT_BY_CAT_ID_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketTradeItem",
+    "keys": "marketIdAndCatIdList",
+    "value": "count",
+    "condition": "",
+    "desc": "千米，按市场商品分类catId分组，每天成交销量",
+    "aggregator": "sum"
+  }
+]

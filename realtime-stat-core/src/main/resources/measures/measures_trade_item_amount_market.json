@@ -1,0 +1,24 @@
+[
+  {
+    "id": "TIAm001",
+    "code": "TRADE_ITEM_AMOUNT_BY_MARKET_ID_PER_DAY",
+    "period": 1440,
+    "event": "MarketTradeItem",
+    "keys": "marketId,skuId",
+    "value": "itemTotalPrice",
+    "condition": "",
+    "desc": "市场，按SKU分组，每天订单交易额",
+    "aggregator": "sum"
+  },
+  {
+    "id": "TIAm002",
+    "code": "TRADE_ITEM_CATS_AMOUNT_BY_MARKET_ID_PER_DAY",
+    "period": 1440,
+    "event": "MarketTradeItem",
+    "keys": "marketId,catIds",
+    "value": "itemTotalPrice",
+    "condition": "",
+    "desc": "市场，按分类分组，每天订单交易额",
+    "aggregator": "sum"
+  }
+]

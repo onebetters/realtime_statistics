@@ -1,0 +1,46 @@
+[
+  {
+    "id": "Sg001",
+    "code": "SELLER_INCR_PER_HOUR_4_QM",
+    "period": 60,
+    "event": "MarketSellerAdd",
+    "keys": "",
+    "value": "identifier",
+    "condition": "",
+    "desc": "千米，每小时新增商家数",
+    "aggregator": "count"
+  },
+  {
+    "id": "Sg002",
+    "code": "SELLER_INCR_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketSellerAdd",
+    "keys": "",
+    "value": "identifier",
+    "condition": "",
+    "desc": "千米，每天新增商家数",
+    "aggregator": "count"
+  },
+  {
+    "id": "Sg003",
+    "code": "SELLER_INCR_PROVINCE_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketSellerAdd",
+    "keys": "sellerProvince",
+    "value": "identifier",
+    "condition": "",
+    "desc": "千米，按省分组，每天新增商家数",
+    "aggregator": "count"
+  },
+  {
+    "id": "Sg004",
+    "code": "SELLER_INCR_CITY_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketSellerAdd",
+    "keys": "sellerCity",
+    "value": "identifier",
+    "condition": "",
+    "desc": "千米，按市分组，每天新增商家数",
+    "aggregator": "count"
+  }
+]

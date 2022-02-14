@@ -1,0 +1,46 @@
+[
+  {
+    "id": "Sa001",
+    "code": "SELLER_INCR_PER_HOUR_4_APP",
+    "period": 60,
+    "event": "MarketSellerAdd",
+    "keys": "b2bGroupId",
+    "value": "identifier",
+    "condition": "",
+    "desc": "小程序，每小时新增商家数",
+    "aggregator": "count"
+  },
+  {
+    "id": "Sa002",
+    "code": "SELLER_INCR_PER_DAY_4_APP",
+    "period": 1440,
+    "event": "MarketSellerAdd",
+    "keys": "b2bGroupId",
+    "value": "identifier",
+    "condition": "",
+    "desc": "小程序，每天新增商家数",
+    "aggregator": "count"
+  },
+  {
+    "id": "Sa003",
+    "code": "SELLER_INCR_PROVINCE_PER_DAY_4_APP",
+    "period": 1440,
+    "event": "MarketSellerAdd",
+    "keys": "b2bGroupId,sellerProvince",
+    "value": "identifier",
+    "condition": "",
+    "desc": "小程序，按省分组，每天新增商家数",
+    "aggregator": "count"
+  },
+  {
+    "id": "Sa004",
+    "code": "SELLER_INCR_CITY_PER_DAY_4_APP",
+    "period": 1440,
+    "event": "MarketSellerAdd",
+    "keys": "b2bGroupId,sellerCity",
+    "value": "identifier",
+    "condition": "",
+    "desc": "小程序，按市分组，每天新增商家数",
+    "aggregator": "count"
+  }
+]

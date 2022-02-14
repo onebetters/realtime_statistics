@@ -1,0 +1,57 @@
+[
+  {
+    "id": "TBa001",
+    "code": "DISTINCT_BUYER_HAVE_TRADE_PER_HOUR_4_APP",
+    "period": 60,
+    "event": "MarketTradeDeal",
+    "keys": "b2bGroupId",
+    "value": "T(com.qianmi.mp.purchase.micro.stat.market.realtime.core.supports.StatHelpers).shopIdAsNumber(buyerShopId)",
+    "condition": "",
+    "desc": "小程序，每小时成交客户数(去重)",
+    "aggregator": "distinctCount"
+  },
+  {
+    "id": "TBa002",
+    "code": "DISTINCT_BUYER_HAVE_TRADE_PER_DAY_4_APP",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "b2bGroupId",
+    "value": "T(com.qianmi.mp.purchase.micro.stat.market.realtime.core.supports.StatHelpers).shopIdAsNumber(buyerShopId)",
+    "condition": "",
+    "desc": "小程序，每天成交客户数(去重)",
+    "aggregator": "distinctCount"
+  },
+  {
+    "id": "TBa003",
+    "code": "DISTINCT_BUYER_FIRST_TRADE_PER_DAY_4_APP",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "b2bGroupId",
+    "value": "T(com.qianmi.mp.purchase.micro.stat.market.realtime.core.supports.StatHelpers).shopIdAsNumber(buyerShopId)",
+    "condition": "firstOrder",
+    "desc": "小程序，每天成交新(首单)客户数(去重)",
+    "aggregator": "distinctCount"
+  },
+  {
+    "id": "TBa004",
+    "code": "DISTINCT_BUYER_FIRST_TRADE_BY_PROVINCE_PER_DAY_4_APP",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "b2bGroupId,marketProvince",
+    "value": "T(com.qianmi.mp.purchase.micro.stat.market.realtime.core.supports.StatHelpers).shopIdAsNumber(buyerShopId)",
+    "condition": "firstOrder",
+    "desc": "小程序，按省分组，每天成交新(首单)客户数(去重)",
+    "aggregator": "distinctCount"
+  },
+  {
+    "id": "TBa005",
+    "code": "DISTINCT_BUYER_FIRST_TRADE_BY_CITY_PER_DAY_4_APP",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "b2bGroupId,marketCity",
+    "value": "T(com.qianmi.mp.purchase.micro.stat.market.realtime.core.supports.StatHelpers).shopIdAsNumber(buyerShopId)",
+    "condition": "firstOrder",
+    "desc": "小程序，按市分组，每天成交新(首单)客户数(去重)",
+    "aggregator": "distinctCount"
+  }
+]

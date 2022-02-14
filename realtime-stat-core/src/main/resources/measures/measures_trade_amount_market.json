@@ -1,0 +1,68 @@
+[
+  {
+    "id": "TAm001",
+    "code": "TRADE_AMOUNT_BY_PAY_TYPE_BY_MARKET_ID_PER_DAY",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "marketId,payTypeId",
+    "value": "totalPrice",
+    "condition": "",
+    "desc": "市场，按支付方式分组，每天订单交易额",
+    "aggregator": "sum"
+  },
+  {
+    "id": "TAm002",
+    "code": "TRADE_AMOUNT_BY_SELLER_ID_PER_DAY",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "marketId,sellerShopId",
+    "value": "totalPrice",
+    "condition": "",
+    "desc": "市场，按商家分组，每天订单交易额",
+    "aggregator": "sum"
+  },
+  {
+    "id": "TAm003",
+    "code": "TRADE_AMOUNT_BUYER_PROVINCE_BY_MARKET_ID_PER_DAY",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "marketId,consigneeProvince",
+    "value": "totalPrice",
+    "condition": "",
+    "desc": "市场，按收货人地址(省)分组，每天订单交易额",
+    "aggregator": "sum"
+  },
+  {
+    "id": "TAm004",
+    "code": "TRADE_AMOUNT_BUYER_CITY_BY_MARKET_ID_PER_DAY",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "marketId,consigneeCity",
+    "value": "totalPrice",
+    "condition": "",
+    "desc": "市场，按收货人地址(市)分组，每天订单交易额",
+    "aggregator": "sum"
+  },
+  {
+    "id": "TAm005",
+    "code": "TRADE_AMOUNT_BY_BUYER_PER_DAY_4_MARKET",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "marketId,buyerUserId",
+    "value": "totalPrice",
+    "condition": "",
+    "desc": "市场，按客户分组，每天订单交易额",
+    "aggregator": "sum"
+  },
+  {
+    "id": "TAm006",
+    "code": "TRADE_AMOUNT_BY_SALE_MAN_PER_DAY_4_MARKET",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "marketId,marketSaleManId",
+    "value": "totalPrice",
+    "condition": "",
+    "desc": "市场，按客户经理分组，每天订单交易额",
+    "aggregator": "sum"
+  }
+]

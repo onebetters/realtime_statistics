@@ -21,3 +21,31 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+.history/
+*.iml
+*/.idea/
+.idea
+target
+*/**/activemq-data/
+*/**/*.~vsd
+.settings/
+.project
+.classpath
+bin
+.DS_Store
+*/**/dubbocache/
+node_modules
+build
+~/
+rebel.xml
+log.txt
+.springBeans
+*_IS_UNDEFINED
+logs
+/swagger/swagger.json
+classes
+.gradle
+gradle
+gradlew
+gradlew.bat

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "Sm001",
+    "code": "SELLER_INCR_BY_MARKET_ID_PER_HOUR",
+    "period": 60,
+    "event": "MarketSellerAdd",
+    "keys": "marketId",
+    "value": "identifier",
+    "condition": "",
+    "desc": "市场，每天新增商家数",
+    "aggregator": "count"
+  },
+  {
+    "id": "Sm002",
+    "code": "SELLER_INCR_BY_MARKET_ID_PER_DAY",
+    "period": 1440,
+    "event": "MarketSellerAdd",
+    "keys": "marketId",
+    "value": "identifier",
+    "condition": "",
+    "desc": "市场，每天新增商家数",
+    "aggregator": "count"
+  }
+]

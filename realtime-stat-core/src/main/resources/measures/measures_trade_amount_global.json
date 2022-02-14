@@ -1,0 +1,101 @@
+[
+  {
+    "id": "TAg001",
+    "code": "TRADE_AMOUNT_PER_HOUR_4_QM",
+    "period": 60,
+    "event": "MarketTradeDeal",
+    "keys": "",
+    "value": "totalPrice",
+    "condition": "",
+    "desc": "千米，每小时订单交易额",
+    "aggregator": "sum"
+  },
+  {
+    "id": "TAg002",
+    "code": "TRADE_AMOUNT_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "",
+    "value": "totalPrice",
+    "condition": "",
+    "desc": "千米，每天订单交易额",
+    "aggregator": "sum"
+  },
+  {
+    "id": "TAg003",
+    "code": "TRADE_AMOUNT_PROVINCE_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "marketProvince",
+    "value": "totalPrice",
+    "condition": "",
+    "desc": "千米，按省分组，每天订单交易额",
+    "aggregator": "sum"
+  },
+  {
+    "id": "TAg004",
+    "code": "TRADE_AMOUNT_CITY_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "marketCity",
+    "value": "totalPrice",
+    "condition": "",
+    "desc": "千米，按市分组，每天订单交易额",
+    "aggregator": "sum"
+  },
+  {
+    "id": "TAg005",
+    "code": "TRADE_AMOUNT_BY_PAY_TYPE_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "payTypeId",
+    "value": "totalPrice",
+    "condition": "",
+    "desc": "千米，按支付方式分组，每天订单交易额",
+    "aggregator": "sum"
+  },
+  {
+    "id": "TAg006",
+    "code": "TRADE_AMOUNT_BY_APP_ID_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "b2bGroupId",
+    "value": "totalPrice",
+    "condition": "",
+    "desc": "千米，按小程序分组，每天订单交易额",
+    "aggregator": "sum"
+  },
+  {
+    "id": "TAg007",
+    "code": "TRADE_AMOUNT_BY_MARKET_ID_PER_HOUR",
+    "period": 60,
+    "event": "MarketTradeDeal",
+    "keys": "marketId",
+    "value": "totalPrice",
+    "condition": "",
+    "desc": "千米，按市场分组，每小时订单交易额",
+    "aggregator": "sum"
+  },
+  {
+    "id": "TAg008",
+    "code": "TRADE_AMOUNT_BY_MARKET_ID_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "marketId",
+    "value": "totalPrice",
+    "condition": "",
+    "desc": "千米，按市场分组，每天订单交易额",
+    "aggregator": "sum"
+  },
+  {
+    "id": "TAg009",
+    "code": "TRADE_AMOUNT_BY_SELLER_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "sellerShopId",
+    "value": "totalPrice",
+    "condition": "",
+    "desc": "千米，按商家分组，每天订单交易额",
+    "aggregator": "sum"
+  }
+]

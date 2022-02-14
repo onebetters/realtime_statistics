@@ -1,0 +1,57 @@
+[
+  {
+    "id": "TBm001",
+    "code": "DISTINCT_BUYER_HAVE_TRADE_PER_HOUR",
+    "period": 60,
+    "event": "MarketTradeDeal",
+    "keys": "marketId",
+    "value": "T(com.qianmi.mp.purchase.micro.stat.market.realtime.core.supports.StatHelpers).shopIdAsNumber(buyerShopId)",
+    "condition": "",
+    "desc": "市场，每小时成交客户数(去重)",
+    "aggregator": "distinctCount"
+  },
+  {
+    "id": "TBm002",
+    "code": "DISTINCT_BUYER_HAVE_TRADE_PER_DAY",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "marketId",
+    "value": "T(com.qianmi.mp.purchase.micro.stat.market.realtime.core.supports.StatHelpers).shopIdAsNumber(buyerShopId)",
+    "condition": "",
+    "desc": "市场，每天成交总客户数(去重)",
+    "aggregator": "distinctCount"
+  },
+  {
+    "id": "TBm003",
+    "code": "DISTINCT_BUYER_FIRST_TRADE_PER_DAY_4_MARKET",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "marketId",
+    "value": "T(com.qianmi.mp.purchase.micro.stat.market.realtime.core.supports.StatHelpers).shopIdAsNumber(buyerShopId)",
+    "condition": "firstOrder",
+    "desc": "市场，每天成交新(首单)客户数(去重)",
+    "aggregator": "distinctCount"
+  },
+  {
+    "id": "TBm004",
+    "code": "DISTINCT_BUYER_FIRST_TRADE_BY_PROVINCE_PER_DAY_4_MARKET",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "marketId,consigneeProvince",
+    "value": "T(com.qianmi.mp.purchase.micro.stat.market.realtime.core.supports.StatHelpers).shopIdAsNumber(buyerShopId)",
+    "condition": "firstOrder",
+    "desc": "市场，按省分组，每天成交新(首单)客户数(去重)",
+    "aggregator": "distinctCount"
+  },
+  {
+    "id": "TBm005",
+    "code": "DISTINCT_BUYER_FIRST_TRADE_BY_CITY_PER_DAY_4_MARKET",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "marketId,consigneeCity",
+    "value": "T(com.qianmi.mp.purchase.micro.stat.market.realtime.core.supports.StatHelpers).shopIdAsNumber(buyerShopId)",
+    "condition": "firstOrder",
+    "desc": "市场，按市分组，每天成交新(首单)客户数(去重)",
+    "aggregator": "distinctCount"
+  }
+]

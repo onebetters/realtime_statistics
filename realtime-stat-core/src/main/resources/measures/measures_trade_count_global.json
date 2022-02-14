@@ -1,0 +1,79 @@
+[
+  {
+    "id": "TCg001",
+    "code": "TRADE_COUNT_PER_HOUR_4_QM",
+    "period": 60,
+    "event": "MarketTradeDeal",
+    "keys": "",
+    "value": "id",
+    "condition": "",
+    "desc": "千米，每小时成交订单数",
+    "aggregator": "count"
+  },
+  {
+    "id": "TCg002",
+    "code": "TRADE_COUNT_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "",
+    "value": "id",
+    "condition": "",
+    "desc": "千米，每天成交订单数",
+    "aggregator": "count"
+  },
+  {
+    "id": "TCg003",
+    "code": "TRADE_COUNT_PROVINCE_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "marketProvince",
+    "value": "id",
+    "condition": "",
+    "desc": "千米，按省分组，每天成交订单数",
+    "aggregator": "count"
+  },
+  {
+    "id": "TCg004",
+    "code": "TRADE_COUNT_CITY_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "marketCity",
+    "value": "id",
+    "condition": "",
+    "desc": "千米，按市分组，每天成交订单数",
+    "aggregator": "count"
+  },
+  {
+    "id": "TCg005",
+    "code": "TRADE_COUNT_BY_APP_ID_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "b2bGroupId",
+    "value": "id",
+    "condition": "",
+    "desc": "千米，按小程序分组，每天成交订单数",
+    "aggregator": "count"
+  },
+  {
+    "id": "TCg006",
+    "code": "TRADE_COUNT_BY_MARKET_ID_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "marketId",
+    "value": "id",
+    "condition": "",
+    "desc": "千米，按市场分组，每天成交订单数",
+    "aggregator": "count"
+  },
+  {
+    "id": "TCg007",
+    "code": "TRADE_COUNT_BY_SELLER_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "sellerShopId",
+    "value": "id",
+    "condition": "",
+    "desc": "千米，按商家店铺分组，每天成交订单数",
+    "aggregator": "count"
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "TAa001",
+    "code": "TRADE_AMOUNT_PER_HOUR_4_APP",
+    "period": 60,
+    "event": "MarketTradeDeal",
+    "keys": "b2bGroupId",
+    "value": "totalPrice",
+    "condition": "",
+    "desc": "小程序，每小时订单交易额",
+    "aggregator": "sum"
+  },
+  {
+    "id": "TAa002",
+    "code": "TRADE_AMOUNT_PER_DAY_4_APP",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "b2bGroupId",
+    "value": "totalPrice",
+    "condition": "",
+    "desc": "小程序，每天订单交易额",
+    "aggregator": "sum"
+  },
+  {
+    "id": "TAa003",
+    "code": "TRADE_AMOUNT_PROVINCE_PER_DAY_4_APP",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "b2bGroupId,marketProvince",
+    "value": "totalPrice",
+    "condition": "",
+    "desc": "小程序，按省分组，每天订单交易额",
+    "aggregator": "sum"
+  },
+  {
+    "id": "TAa004",
+    "code": "TRADE_AMOUNT_CITY_PER_DAY_4_APP",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "b2bGroupId,marketCity",
+    "value": "totalPrice",
+    "condition": "",
+    "desc": "小程序，按市分组，每天订单交易额",
+    "aggregator": "sum"
+  },
+  {
+    "id": "TAa005",
+    "code": "TRADE_AMOUNT_BY_PAY_TYPE_PER_DAY_4_APP",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "b2bGroupId,payTypeId",
+    "value": "totalPrice",
+    "condition": "",
+    "desc": "小程序，按支付方式分组，每天订单交易额",
+    "aggregator": "sum"
+  },
+  {
+    "id": "TAa006",
+    "code": "TRADE_AMOUNT_BY_MARKET_ID_PER_DAY_4_APP",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "b2bGroupId,marketId",
+    "value": "totalPrice",
+    "condition": "",
+    "desc": "小程序，按市场分组，天订单交易额",
+    "aggregator": "sum"
+  },
+  {
+    "id": "TAa007",
+    "code": "TRADE_AMOUNT_BY_SELLER_PER_DAY_4_APP",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "b2bGroupId,sellerShopId",
+    "value": "totalPrice",
+    "condition": "",
+    "desc": "小程序，按商家分组，每天订单交易额",
+    "aggregator": "sum"
+  }
+]

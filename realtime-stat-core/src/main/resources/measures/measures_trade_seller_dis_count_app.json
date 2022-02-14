@@ -1,0 +1,24 @@
+[
+  {
+    "id": "TSa001",
+    "code": "DISTINCT_SELLER_HAVE_TRADE_PER_HOUR_4_APP",
+    "period": 60,
+    "event": "MarketTradeDeal",
+    "keys": "b2bGroupId",
+    "value": "T(com.qianmi.mp.purchase.micro.stat.market.realtime.core.supports.StatHelpers).shopIdAsNumber(sellerShopId)",
+    "condition": "",
+    "desc": "小程序，每小时成交商家店铺数(去重)",
+    "aggregator": "distinctCount"
+  },
+  {
+    "id": "TSa002",
+    "code": "DISTINCT_SELLER_HAVE_TRADE_PER_DAY_4_APP",
+    "period": 1440,
+    "event": "MarketTradeDeal",
+    "keys": "b2bGroupId",
+    "value": "T(com.qianmi.mp.purchase.micro.stat.market.realtime.core.supports.StatHelpers).shopIdAsNumber(sellerShopId)",
+    "condition": "",
+    "desc": "小程序，每天成交商家店铺数(去重)",
+    "aggregator": "distinctCount"
+  }
+]

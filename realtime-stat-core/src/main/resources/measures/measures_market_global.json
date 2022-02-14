@@ -1,0 +1,46 @@
+[
+  {
+    "id": "Mg001",
+    "code": "MARKET_INCR_PER_HOUR_4_QM",
+    "period": 60,
+    "event": "MarketAdd",
+    "keys": "",
+    "value": "identifier",
+    "condition": "",
+    "desc": "千米，每小时新增市场数",
+    "aggregator": "count"
+  },
+  {
+    "id": "Mg002",
+    "code": "MARKET_INCR_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketAdd",
+    "keys": "",
+    "value": "identifier",
+    "condition": "",
+    "desc": "千米，每天新增市场数",
+    "aggregator": "count"
+  },
+  {
+    "id": "Mg003",
+    "code": "MARKET_INCR_PROVINCE_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketAdd",
+    "keys": "province",
+    "value": "identifier",
+    "condition": "",
+    "desc": "千米，按省分组，每天新增市场数",
+    "aggregator": "count"
+  },
+  {
+    "id": "Mg004",
+    "code": "MARKET_INCR_CITY_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketAdd",
+    "keys": "city",
+    "value": "identifier",
+    "condition": "",
+    "desc": "千米，按市分组，每天新增市场数",
+    "aggregator": "count"
+  }
+]

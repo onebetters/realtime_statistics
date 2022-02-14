@@ -1,0 +1,46 @@
+[
+  {
+    "id": "Bg001",
+    "code": "BUYER_INCR_PER_HOUR_4_QM",
+    "period": 60,
+    "event": "MarketBuyerJoin",
+    "keys": "",
+    "value": "identifier",
+    "condition": "",
+    "desc": "千米，每小时新增客户数",
+    "aggregator": "count"
+  },
+  {
+    "id": "Bg002",
+    "code": "BUYER_INCR_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketBuyerJoin",
+    "keys": "",
+    "value": "identifier",
+    "condition": "",
+    "desc": "千米，每天新增客户数",
+    "aggregator": "count"
+  },
+  {
+    "id": "Bg003",
+    "code": "BUYER_INCR_PROVINCE_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketBuyerJoin",
+    "keys": "buyerProvince",
+    "value": "identifier",
+    "condition": "",
+    "desc": "千米，按省分组，每天新增客户数",
+    "aggregator": "count"
+  },
+  {
+    "id": "Bg004",
+    "code": "BUYER_INCR_CITY_PER_DAY_4_QM",
+    "period": 1440,
+    "event": "MarketBuyerJoin",
+    "keys": "buyerCity",
+    "value": "identifier",
+    "condition": "",
+    "desc": "千米，按市分组，每天新增客户数",
+    "aggregator": "count"
+  }
+]

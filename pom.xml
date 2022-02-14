@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.5</version>
+    </parent>
+
+    <groupId>com.zzc.statistics</groupId>
+    <artifactId>realtime_statistics</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <modules>
+        <module>realtime-stat-app</module>
+        <module>realtime-stat-api</module>
+        <module>realtime-stat-core</module>
+    </modules>
+
+    <description>
+        一个管理后台网站概况页实时统计工具，指标支持配置，无需额外开发
+    </description>
+
+    <properties>
+        <!-- git版本 -->
+        <git.url>https://github.com/onebetters/realtime_statistics.git</git.url>
+
+        <skipTests>true</skipTests>
+        <disable.checks>true</disable.checks>
+        <!-- java 版本 -->
+        <java.version>1.8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <!-- 文件编码 -->
+        <file.encoding>UTF-8</file.encoding>
+        <project.build.sourceEncoding>${file.encoding}</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>${file.encoding}</project.reporting.outputEncoding>
+        <!-- dubbo -->
+        <dubbo-spring.version>2.7.4.1</dubbo-spring.version>
+        <dubbo.version>${dubbo-spring.version}</dubbo.version>
+        <!-- gavin -->
+        <gavin-common-api.version>4.0.43-RELEASE</gavin-common-api.version>
+
+        <!-- 开源组件 -->
+        <lombok.version>1.18.20</lombok.version>
+        <jsr305.version>3.0.2</jsr305.version>
+        <commons-lang3.version>3.12.0</commons-lang3.version>
+        <commons-io.version>2.8.0</commons-io.version>
+        <commons-collections4.version>4.4</commons-collections4.version>
+        <reflections.version>0.9.12</reflections.version>
+        <validation-api.version>2.0.1.Final</validation-api.version>
+        <!-- guava -->
+        <guava.version>30.1.1-jre</guava.version>
+        <!-- json -->
+        <fastjson.version>1.2.76</fastjson.version>
+        <jackson.version>2.11.4</jackson.version>
+        <curator.version>4.2.0</curator.version>
+        <!-- log -->
+        <log4j-over-slf4j.version>1.7.28</log4j-over-slf4j.version>
+        <logback-encoder.version>6.1</logback-encoder.version>
+        <janino.version>3.1.0</janino.version>
+        <orika.spring-boot.version>1.9.0</orika.spring-boot.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>jsr305</artifactId>
+            <version>${jsr305.version}</version>
+            <optional>true</optional>
+        </dependency>
+        <!--<dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>19.0.0</version>
+            <optional>true</optional>
+        </dependency>-->
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.zzc.statistics</groupId>
+                <artifactId>realtime-stat-app</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zzc.statistics</groupId>
+                <artifactId>realtime-stat-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zzc.statistics</groupId>
+                <artifactId>realtime-stat-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!-- gavin -->
+            <dependency>
+                <groupId>com.qianmi.gavin</groupId>
+                <artifactId>gavin-common-api</artifactId>
+                <version>${gavin-common-api.version}</version>
+            </dependency>
+            <!-- apache dubbo -->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo-spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>spring-context</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>spring</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>javax.servlet</groupId>
+                        <artifactId>servlet-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <!-- 依赖开源组件 -->
+            <!-- commons -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${commons-collections4.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+            <!-- reflections -->
+            <dependency>
+                <groupId>org.reflections</groupId>
+                <artifactId>reflections</artifactId>
+                <version>${reflections.version}</version>
+            </dependency>
+            <!-- Bean Validation -->
+            <dependency>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>${validation-api.version}</version>
+            </dependency>
+            <!-- google guava -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+            <!-- json -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-framework</artifactId>
+                <version>${curator.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.zookeeper</groupId>
+                        <artifactId>zookeeper</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-recipes</artifactId>
+                <version>${curator.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.zookeeper</groupId>
+                        <artifactId>zookeeper</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <!-- logger -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>log4j-over-slf4j</artifactId>
+                <version>${log4j-over-slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.logstash.logback</groupId>
+                <artifactId>logstash-logback-encoder</artifactId>
+                <version>${logback-encoder.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.codehaus.janino</groupId>
+                <artifactId>janino</artifactId>
+                <version>${janino.version}</version>
+            </dependency>
+            <!-- java bean 转换 -->
+            <dependency>
+                <groupId>net.rakugakibox.spring.boot</groupId>
+                <artifactId>orika-spring-boot-starter</artifactId>
+                <version>${orika.spring-boot.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <!-- 默认插件 -->
+        <plugins>
+            <!-- 打包源代码 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- 生成javadoc -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <doclint>none</doclint>
+                    <failOnError>false</failOnError>
+                    <show>public</show>
+                    <maxmemory>1024</maxmemory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

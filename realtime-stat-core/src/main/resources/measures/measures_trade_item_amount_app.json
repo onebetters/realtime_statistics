@@ -1,0 +1,13 @@
+[
+  {
+    "id": "TIAa001",
+    "code": "TRADE_ITEM_AMOUNT_BY_CAT_ID_PER_DAY_4_APP",
+    "period": 1440,
+    "event": "MarketTradeItem",
+    "keys": "b2bGroupId,marketIdAndCatIdList",
+    "value": "itemTotalPrice",
+    "condition": "",
+    "desc": "小程序，按市场商品分类catId分组，每天订单交易额",
+    "aggregator": "sum"
+  }
+]
