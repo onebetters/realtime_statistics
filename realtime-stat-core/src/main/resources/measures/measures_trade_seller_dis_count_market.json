@@ -5,7 +5,7 @@
     "period": 60,
     "event": "MarketTradeDeal",
     "keys": "marketId",
-    "value": "T(com.qianmi.mp.purchase.micro.stat.market.realtime.core.supports.StatHelpers).shopIdAsNumber(sellerShopId)",
+    "value": "T(com.zzc.micro.stat.core.supports.StatHelpers).shopIdAsNumber(sellerShopId)",
     "condition": "",
     "desc": "市场，每小时成交商家店铺数(去重)",
     "aggregator": "distinctCount"
@@ -16,7 +16,7 @@
     "period": 1440,
     "event": "MarketTradeDeal",
     "keys": "marketId",
-    "value": "T(com.qianmi.mp.purchase.micro.stat.market.realtime.core.supports.StatHelpers).shopIdAsNumber(sellerShopId)",
+    "value": "T(com.zzc.micro.stat.core.supports.StatHelpers).shopIdAsNumber(sellerShopId)",
     "condition": "",
     "desc": "市场，每天成交商家店铺数(去重)",
     "aggregator": "distinctCount"
@@ -27,7 +27,7 @@
     "period": 1440,
     "event": "MarketTradeDeal",
     "keys": "marketId,consigneeProvince",
-    "value": "T(com.qianmi.mp.purchase.micro.stat.market.realtime.core.supports.StatHelpers).shopIdAsNumber(sellerShopId)",
+    "value": "T(com.zzc.micro.stat.core.supports.StatHelpers).shopIdAsNumber(sellerShopId)",
     "condition": "",
     "desc": "市场，按省(收货人)分组，每天成交商家店铺数(去重)",
     "aggregator": "distinctCount"
@@ -38,7 +38,7 @@
     "period": 1440,
     "event": "MarketTradeDeal",
     "keys": "marketId,consigneeCity",
-    "value": "T(com.qianmi.mp.purchase.micro.stat.market.realtime.core.supports.StatHelpers).shopIdAsNumber(sellerShopId)",
+    "value": "T(com.zzc.micro.stat.core.supports.StatHelpers).shopIdAsNumber(sellerShopId)",
     "condition": "",
     "desc": "市场，按市(收货人)分组，每天成交商家店铺数(去重)",
     "aggregator": "distinctCount"

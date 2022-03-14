@@ -5,7 +5,7 @@
     "period": 60,
     "event": "MarketTradeDeal",
     "keys": "",
-    "value": "T(com.qianmi.mp.purchase.micro.stat.market.realtime.core.supports.StatHelpers).shopIdAsNumber(marketId)",
+    "value": "T(com.zzc.micro.stat.core.supports.StatHelpers).shopIdAsNumber(marketId)",
     "condition": "",
     "desc": "千米，每小时成交市场数(去重)",
     "aggregator": "distinctCount"
@@ -16,7 +16,7 @@
     "period": 1440,
     "event": "MarketTradeDeal",
     "keys": "",
-    "value": "T(com.qianmi.mp.purchase.micro.stat.market.realtime.core.supports.StatHelpers).shopIdAsNumber(marketId)",
+    "value": "T(com.zzc.micro.stat.core.supports.StatHelpers).shopIdAsNumber(marketId)",
     "condition": "",
     "desc": "千米，每天成交市场数(去重)",
     "aggregator": "distinctCount"

@@ -22,13 +22,13 @@ import java.util.regex.Matcher;
 public class StatTaskIdGenerator {
 
     public static void main(String[] args) throws IOException {
-        final String packageName = "com.qianmi.mp.purchase.micro.stat";
+        final String packageName = "com.zzc.micro.stat";
         final String className = "StatTaskIds";
         final String measureFileRegex = "classpath:measures/*.json";
 
         final File workDir = new File(new File("").getCanonicalPath());
 
-        final File moduleDir = new File(workDir, "b2b-purchase-stat-api");
+        final File moduleDir = new File(workDir, "realtime-stat-api");
         Validate.isTrue(Files.exists(moduleDir.toPath()), "工作目录不存在，无法生成代码，请手工确认");
         Validate.isTrue(Files.isDirectory(moduleDir.toPath()), "工作目录不正确，无法生成代码，请手工确认");
 
