@@ -13,14 +13,17 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 /**
- * Hello world!
- * @author Administrator
+ * <p>Filename: com.zzc.micro.Application.java</p>
+ * <p>Date: 2022-06-27, 周一, 19:37:21.</p>
+ *
+ * @author zhichuanzhang
+ * @version 0.1.0
  */
 @Slf4j
 @EnableAspectJAutoProxy
 @EnableScheduling
 @RestController
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.zzc.micro.*")
 public class Application {
 
     public static void main(String[] args) throws UnknownHostException {

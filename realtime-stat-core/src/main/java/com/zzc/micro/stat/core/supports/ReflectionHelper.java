@@ -10,7 +10,7 @@ import org.reflections.util.ConfigurationBuilder;
  */
 public class ReflectionHelper {
 
-    private static final Reflections reflections = new Reflections(new ConfigurationBuilder().setUrls(ClasspathHelper.forPackage("com.qianmi"))
+    private static final Reflections reflections = new Reflections(new ConfigurationBuilder().setUrls(ClasspathHelper.forPackage("com.zzc.micro"))
             .setScanners(new SubTypesScanner()));
 
     public static Reflections subTypeScanReflections() {

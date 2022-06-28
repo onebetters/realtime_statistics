@@ -42,6 +42,8 @@
         <!-- dubbo -->
         <dubbo-spring.version>2.7.4.1</dubbo-spring.version>
         <dubbo.version>${dubbo-spring.version}</dubbo.version>
+        <curator.version>4.2.0</curator.version>
+        <zookeeper.version>3.4.6</zookeeper.version>
         <!-- gavin -->
         <gavin-common-api.version>4.0.43-RELEASE</gavin-common-api.version>
 
@@ -58,12 +60,12 @@
         <!-- json -->
         <fastjson.version>1.2.76</fastjson.version>
         <jackson.version>2.11.4</jackson.version>
-        <curator.version>4.2.0</curator.version>
         <!-- log -->
         <log4j-over-slf4j.version>1.7.28</log4j-over-slf4j.version>
         <logback-encoder.version>6.1</logback-encoder.version>
         <janino.version>3.1.0</janino.version>
         <orika.spring-boot.version>1.9.0</orika.spring-boot.version>
+        <jetbrains.annotations.version>19.0.0</jetbrains.annotations.version>
     </properties>
 
     <dependencies>
@@ -79,12 +81,12 @@
             <version>${jsr305.version}</version>
             <optional>true</optional>
         </dependency>
-        <!--<dependency>
+        <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
-            <version>19.0.0</version>
+            <version>${jetbrains.annotations.version}</version>
             <optional>true</optional>
-        </dependency>-->
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -103,12 +105,6 @@
                 <groupId>com.zzc.statistics</groupId>
                 <artifactId>realtime-stat-core</artifactId>
                 <version>${project.version}</version>
-            </dependency>
-            <!-- gavin -->
-            <dependency>
-                <groupId>com.qianmi.gavin</groupId>
-                <artifactId>gavin-common-api</artifactId>
-                <version>${gavin-common-api.version}</version>
             </dependency>
             <!-- apache dubbo -->
             <dependency>
@@ -205,6 +201,21 @@
                     <exclusion>
                         <groupId>org.apache.zookeeper</groupId>
                         <artifactId>zookeeper</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${zookeeper.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>

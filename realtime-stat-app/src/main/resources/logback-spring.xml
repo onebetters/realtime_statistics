@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true" scan="true" scanPeriod="30 seconds">
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+    <logger name="com.zzc.micro" level="INFO"/>
+    <logger name="com.alibaba.dubbo" level="ERROR"/>
+    <logger name="org.apache.dubbo" level="ERROR"/>
+    <logger name="org.apache.activemq" level="ERROR"/>
+
+    <logger name="org.reflections.Reflections" level="ERROR"/>
+</configuration>

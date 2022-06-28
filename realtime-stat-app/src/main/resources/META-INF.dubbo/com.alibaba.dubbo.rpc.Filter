@@ -1,0 +1,2 @@
+providerAccessLogFilter=com.qianmi.mp.purchase.micro.supports.configuration.ms.log.ProviderAccessLogFilter
+consumerAccessLogFilter=com.qianmi.mp.purchase.micro.supports.configuration.ms.log.ConsumerAccessLogFilter
